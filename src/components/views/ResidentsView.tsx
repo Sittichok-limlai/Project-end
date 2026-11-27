@@ -6,6 +6,7 @@ import {
   UserPlus, 
   Download,
   Eye,
+  Users,
   X
 } from 'lucide-react';
 import type { Resident } from '../../types';
@@ -39,7 +40,7 @@ export const ResidentsView: React.FC<ResidentsViewProps> = ({ residents }) => {
       <div className="view-header-row">
         <div>
           <h2 className="view-title">ทะเบียนข้อมูลผู้พักอาศัย (Residents Directory)</h2>
-          <p className="view-subtitle">รายชื่อนักศึกษาหอพัก Niva Residence ทั้งหมด 108 คน ประจำอาคาร A</p>
+          <p className="view-subtitle">รายชื่อนักศึกษาหอพัก Rmutt Residence ทั้งหมด 108 คน ประจำอาคาร A</p>
         </div>
         <div className="view-header-actions">
           <button className="add-room-btn secondary">

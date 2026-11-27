@@ -116,7 +116,7 @@ export const UserChatView: React.FC<UserChatViewProps> = ({
             </div>
             <div>
               <div className="header-title-row">
-                <h2 className="user-chat-admin-title">ฝ่ายธุรการและนิติบุคคล NIVA RESIDENCE</h2>
+                <h2 className="user-chat-admin-title">ฝ่ายธุรการและนิติบุคคล Rmutt RESIDENCE</h2>
                 <span className="user-chat-online-badge">
                   <span className="online-green-pulse"></span>
                   เจ้าหน้าที่ออนไลน์
@@ -188,7 +188,7 @@ export const UserChatView: React.FC<UserChatViewProps> = ({
               <ShieldCheck size={22} className="text-blue-600" />
             </div>
             <div className="welcome-text-box">
-              <div className="welcome-title">ยินดีต้อนรับสู่ศูนย์บริการแชทหอพัก Niva Residence</div>
+              <div className="welcome-title">ยินดีต้อนรับสู่ศูนย์บริการแชทหอพัก Rmutt Residence</div>
               <p className="welcome-desc">
                 น้อง <strong>{resident.name}</strong> สามารถพิมพ์สอบถามเรื่องห้องพัก <strong>{resident.roomNumber}</strong>, แจ้งซ่อมบำรุง, ติดตามพัสดุ หรือแจ้งปัญหาฉุกเฉินได้ทันที ข้อความนี้ส่งตรงถึงเคาน์เตอร์ธุรการหอพักครับ
               </p>
@@ -212,7 +212,7 @@ export const UserChatView: React.FC<UserChatViewProps> = ({
                 <div className="user-msg-bubble-group">
                   <div className="user-msg-sender-info">
                     <span className="sender-label">
-                      {isResident ? 'ฉัน (ห้อง ' + resident.roomNumber + ')' : 'นิติบุคคล Niva Residence'}
+                      {isResident ? 'ฉัน (ห้อง ' + resident.roomNumber + ')' : 'นิติบุคคล Rmutt Residence'}
                     </span>
                     <span className="sender-time">{msg.timeFormatted}</span>
                   </div>

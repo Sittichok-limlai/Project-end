@@ -43,23 +43,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       <div className="dashboard-welcome-banner">
         <div>
           <h2 className="welcome-title">ภาพรวมระบบบริหารจัดการหอพักนักศึกษา</h2>
-          <p className="welcome-desc">ยินดีต้อนรับสู่แดชบอร์ด Niva Residence · มหาวิทยาลัยนิวา ประจำภาคการศึกษา 2/2568</p>
+          <p className="welcome-desc">ยินดีต้อนรับสู่แดชบอร์ด Rmutt Residence · มหาวิทยาลัยราชมงคลธัญบุรี ประจำภาคการศึกษา 2/2568</p>
         </div>
         <div className="quick-action-button-group">
-          <button 
-            className="action-btn primary"
-            onClick={() => onNavigate('billing')}
-          >
-            <Send size={16} />
-            <span>ส่งบิลผ่าน LINE OA</span>
-          </button>
-          <button 
-            className="action-btn secondary"
-            onClick={() => onNavigate('linenotify')}
-          >
-            <PackagePlus size={16} />
-            <span>สแกนพัสดุเข้า</span>
-          </button>
+          
         </div>
       </div>
 

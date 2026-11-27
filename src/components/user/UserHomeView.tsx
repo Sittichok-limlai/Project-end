@@ -46,7 +46,7 @@ export const UserHomeView: React.FC<UserHomeViewProps> = ({
             <span className="student-badge-tag">{resident.faculty} · รหัส {resident.studentId}</span>
           </div>
           <p className="greeting-sub">
-            ยินดีต้อนรับสู่ระบบพอร์ทัลบริการผู้พักอาศัย หอพักนักศึกษา Niva Residence อาคาร A
+            ยินดีต้อนรับสู่ระบบพอร์ทัลบริการผู้พักอาศัย หอพักนักศึกษา Rmutt Residence อาคาร A
           </p>
         </div>
 
@@ -364,7 +364,7 @@ export const UserHomeView: React.FC<UserHomeViewProps> = ({
               <Bell className="text-blue-600" size={20} />
               <span>ประกาศข่าวสารและกิจกรรมหอพัก</span>
             </h3>
-            <p className="box-sub">ประกาศทางการจากสำนักงานบริหารหอพักนักศึกษา Niva Residence</p>
+            <p className="box-sub">ประกาศทางการจากสำนักงานบริหารหอพักนักศึกษา Rmutt Residence</p>
           </div>
           <button 
             className="box-link-btn"

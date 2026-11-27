@@ -139,7 +139,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
           <div className="topbar-left">
             <div className="topbar-dorm-tag">
               <Building size={16} className="building-icon" />
-              <span>มหาวิทยาลัยนิวา · อาคาร A (120 ห้อง)</span>
+              <span>มหาวิทยาลัยราชมงคลธัญบุรี · อาคาร A (120 ห้อง)</span>
             </div>
           </div>
 

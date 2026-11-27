@@ -354,7 +354,7 @@ export const AdminChatView: React.FC<AdminChatViewProps> = ({
                   <div className="msg-bubble-wrapper">
                     <div className="msg-meta-top">
                       <span className="msg-sender-name">
-                        {isAdmin ? 'นิติบุคคล Niva Residence (เจ้าหน้าที่)' : msg.senderName}
+                        {isAdmin ? 'นิติบุคคล Rmutt Residence (เจ้าหน้าที่)' : msg.senderName}
                       </span>
                       <span className="msg-time-stamp">{msg.timeFormatted}</span>
                     </div>

@@ -117,7 +117,7 @@ export const UserBillingView: React.FC<UserBillingViewProps> = ({
           {/* Detailed Itemized Receipt Card */}
           <div className="bill-itemized-card">
             <div className="itemized-header">
-              <span className="dorm-name">หอพัก Niva Residence · ห้อง {bill.roomNumber}</span>
+              <span className="dorm-name">หอพัก Rmutt Residence · ห้อง {bill.roomNumber}</span>
               <span className="bill-month-badge">{bill.month}</span>
             </div>
 
@@ -182,7 +182,7 @@ export const UserBillingView: React.FC<UserBillingViewProps> = ({
                   <QrCode size={190} className="text-slate-900" />
                 </div>
                 <div className="qr-pay-info">
-                  <div className="biller-name">มหาวิทยาลัยนิวา (หอพักนักศึกษา)</div>
+                  <div className="biller-name">มหาวิทยาลัยราชมงคลธัญบุรี (หอพักนักศึกษา)</div>
                   <div className="biller-id">Biller ID: 0105556098765</div>
                   <div className="pay-amount-badge">฿{bill.grandTotal.toLocaleString()} บาท</div>
                   <div className="ref-code">Ref: NV-{bill.roomNumber}-256902</div>
@@ -290,7 +290,7 @@ export const UserBillingView: React.FC<UserBillingViewProps> = ({
                 </div>
                 <div>
                   <h3 className="modal-title">ใบเสร็จรับเงิน / Receipt</h3>
-                  <p className="modal-sub">มหาวิทยาลัยนิวา · หอพักนักศึกษา Niva Residence</p>
+                  <p className="modal-sub">มหาวิทยาลัยราชมงคลธัญบุรี · หอพักนักศึกษา Rmutt Residence</p>
                 </div>
               </div>
               <button className="modal-close-btn" onClick={() => setShowReceiptModal(false)}>
@@ -302,7 +302,7 @@ export const UserBillingView: React.FC<UserBillingViewProps> = ({
               <div className="receipt-watermark-box">
                 <div className="receipt-head-row">
                   <div>
-                    <div className="receipt-org">มหาวิทยาลัยนิวา (Niva University)</div>
+                    <div className="receipt-org">มหาวิทยาลัยราชมงคลธัญบุรี (Rmutt University)</div>
                     <div className="receipt-org-sub">สำนักงานบริหารทรัพย์สินและหอพักนักศึกษา</div>
                     <div className="receipt-tax">เลขประจำตัวผู้เสียภาษี: 0105556098765</div>
                   </div>

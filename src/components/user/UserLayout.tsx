@@ -156,7 +156,7 @@ export const UserLayout: React.FC<UserLayoutProps> = ({
           <div className="topbar-left">
             <div className="topbar-dorm-tag">
               <Building size={16} className="building-icon" />
-              <span>มหาวิทยาลัยนิวา · อาคาร A (ห้อง {currentResident.roomNumber})</span>
+              <span>มหาวิทยาลัยราชมงคลธัญบุรี · อาคาร A (ห้อง {currentResident.roomNumber})</span>
             </div>
           </div>
 
@@ -264,7 +264,7 @@ export const UserLayout: React.FC<UserLayoutProps> = ({
                 </div>
                 <div>
                   <h3 className="modal-title">ติดต่อสำนักงานหอพัก & ฉุกเฉิน</h3>
-                  <p className="modal-sub">มหาวิทยาลัยนิวา · อาคาร A</p>
+                  <p className="modal-sub">มหาวิทยาลัยราชมงคลธัญบุรี · อาคาร A</p>
                 </div>
               </div>
               <button className="modal-close-btn" onClick={() => setShowContactModal(false)}>

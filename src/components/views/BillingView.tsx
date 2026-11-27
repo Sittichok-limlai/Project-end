@@ -561,7 +561,7 @@ export const BillingView: React.FC<BillingViewProps> = ({
                     <div className="transfer-arrow">↓</div>
                     <div className="transfer-party">
                       <span className="party-role">ไปยัง:</span>
-                      <span className="party-name">มหาวิทยาลัยนิวา (หอพัก Niva Residence)</span>
+                      <span className="party-name">มหาวิทยาลัยราชมงคลธัญบุรี (หอพัก Rmutt Residence)</span>
                       <span className="party-acc">พร้อมเพย์ 0105556098765</span>
                     </div>
                   </div>

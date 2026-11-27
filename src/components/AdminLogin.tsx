@@ -45,7 +45,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess }) => {
               <path d="M20 26V29.5" stroke="#0284C7" strokeWidth="1.2" />
             </svg>
           </div>
-          <span className="brand-title">NIVA RESIDENCE</span>
+          <span className="brand-title">Rmutt Residence </span>
         </div>
 
         {/* Center Content */}
@@ -59,9 +59,9 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess }) => {
             จากพื้นที่ทำงานเดียวแบบครบวงจร
           </p>
 
-          {/* Stats Card: NIVA AT A GLANCE */}
+          {/* Stats Card: Rmutt Residence AT A GLANCE */}
           <div className="niva-glance-card">
-            <div className="glance-header">NIVA AT A GLANCE</div>
+            <div className="glance-header">Rmutt Residence AT A GLANCE</div>
             <div className="glance-stats-grid">
               <div className="stat-col">
                 <div className="stat-number">120</div>
@@ -77,7 +77,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess }) => {
               </div>
             </div>
             <div className="glance-footer-note">
-              มหาวิทยาลัยนิวา · ข้อมูลและตราสัญลักษณ์ตัวอย่าง
+              มหาวิทยาลัยราชมงคลธัญบุรี · ข้อมูลและตราสัญลักษณ์ตัวอย่าง
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess }) => {
         {/* Banner Footer */}
         <div className="banner-bottom-note">
           <ShieldCheck size={16} className="shield-icon" />
-          <span>ปลอดภัยสำหรับเจ้าหน้าที่ · Niva Residence Dormitory System</span>
+          <span>ปลอดภัยสำหรับเจ้าหน้าที่ · Rmutt Residence Dormitory System</span>
         </div>
       </div>
 
@@ -194,7 +194,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess }) => {
 
           {/* Footer Copyright */}
           <div className="login-footer-copy">
-            © 2569 Niva Residence · นโยบายความเป็นส่วนตัว
+            © 2569 Rmutt Residence · นโยบายความเป็นส่วนตัว
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ export const SettingsView: React.FC = () => {
   const [elecRate, setElecRate] = useState('8.00');
   const [waterRate, setWaterRate] = useState('18.00');
   const [commonFee, setCommonFee] = useState('300');
-  const [dormName, setDormName] = useState('หอพักนักศึกษา Niva Residence (อาคาร A)');
+  const [dormName, setDormName] = useState('หอพักนักศึกษา Rmutt Residence (อาคาร A)');
   const [promptPay, setPromptPay] = useState('0105556098765');
   const [savedSuccess, setSavedSuccess] = useState(false);
 
@@ -20,7 +20,7 @@ export const SettingsView: React.FC = () => {
       <div className="view-header-row">
         <div>
           <h2 className="view-title">การตั้งค่าระบบ (System Settings)</h2>
-          <p className="view-subtitle">กำหนดอัตราค่าน้ำ ค่าไฟ บัญชีรับชำระเงิน และข้อมูลหอพัก Niva Residence</p>
+          <p className="view-subtitle">กำหนดอัตราค่าน้ำ ค่าไฟ บัญชีรับชำระเงิน และข้อมูลหอพัก Rmutt Residence</p>
         </div>
       </div>
 

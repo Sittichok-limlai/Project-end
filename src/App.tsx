@@ -26,8 +26,10 @@ import { AdminLogin } from './components/AdminLogin';
 import { AdminLayout } from './components/AdminLayout';
 import { DashboardView } from './components/views/DashboardView';
 import { RoomsView } from './components/views/RoomsView';
+import type { ResidentInput } from './components/views/RoomsView';
 import { ResidentsView } from './components/views/ResidentsView';
 import { BillingView } from './components/views/BillingView';
+import type { NewBillInput } from './components/views/BillingView';
 import { RepairsView } from './components/views/RepairsView';
 import { AdminChatView } from './components/views/AdminChatView';
 import { SettingsView } from './components/views/SettingsView';
@@ -70,7 +72,30 @@ export function App() {
 
   // Admin Actions
   const handleUpdateRoomStatus = (roomId: string, newStatus: RoomStatus) => {
-    setRooms(prev => prev.map(r => r.id === roomId ? { ...r, status: newStatus } : r));
+    setRooms(prev => prev.map(r => r.id === roomId ? {
+      ...r,
+      status: newStatus,
+      // เมื่อเปลี่ยนห้องเป็น "ว่าง" ให้ล้างข้อมูลผู้พักเดิมออก
+      ...(newStatus === 'vacant'
+        ? { residentName: undefined, phone: undefined, checkInDate: undefined }
+        : {}),
+    } : r));
+  };
+
+  // เพิ่มผู้พักอาศัยเข้าห้องว่าง → เปลี่ยนสถานะเป็น occupied พร้อมข้อมูลผู้พัก
+  const handleAssignResident = (roomId: string, resident: ResidentInput) => {
+    setRooms(prev => prev.map(r => r.id === roomId ? {
+      ...r,
+      status: 'occupied',
+      residentName: resident.residentName,
+      phone: resident.phone,
+      checkInDate: resident.checkInDate,
+    } : r));
+  };
+
+  // สร้างบิลใหม่ (สถานะเริ่มต้น unpaid มาจากฟอร์มใน BillingView)
+  const handleCreateBill = (bill: NewBillInput) => {
+    setBills(prev => [{ ...bill, id: `bill-${Date.now()}` }, ...prev]);
   };
 
   const handleApproveBill = (billId: string) => {
@@ -145,7 +170,7 @@ export function App() {
       id: `msg-${Date.now()}`,
       roomNumber,
       sender: 'admin',
-      senderName: 'นิติบุคคล Niva Residence',
+      senderName: 'นิติบุคคล Rmutt Residence',
       text,
       timestamp: now.toISOString(),
       timeFormatted,
@@ -213,7 +238,7 @@ export function App() {
         id: `msg-auto-${Date.now()}`,
         roomNumber,
         sender: 'admin',
-        senderName: 'นิติบุคคล Niva Residence',
+        senderName: 'นิติบุคคล Rmutt Residence',
         text: `เจ้าหน้าที่ธุรการได้รับเรื่องของห้อง ${roomNumber} เรียบร้อยแล้วครับ กำลังประสานงานตรวจสอบให้นะครับ`,
         timestamp: replyNow.toISOString(),
         timeFormatted: replyTime,
@@ -259,6 +284,7 @@ export function App() {
               <RoomsView
                 rooms={rooms}
                 onUpdateRoomStatus={handleUpdateRoomStatus}
+                onAssignResident={handleAssignResident}
               />
             )}
 
@@ -273,6 +299,7 @@ export function App() {
                 bills={bills}
                 onApproveBill={handleApproveBill}
                 onRejectBill={handleRejectBill}
+                onCreateBill={handleCreateBill}
                 activeVerificationBill={activeVerificationBill}
                 onCloseVerificationModal={() => setActiveVerificationBill(null)}
               />
